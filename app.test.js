@@ -2,7 +2,8 @@ const {
     add,
     subtract,
     multiply,
-    divide
+    divide,
+    square
 } = require("./app");
 
 test("adds two numbers", () => {
@@ -25,4 +26,8 @@ test("prevents division by zero", () => {
     expect(() => divide(10, 0)).toThrow(
         "Cannot divide by zero"
     );
+});
+
+test("calculates square of a number", () => {
+    expect(square(5)).toBe(25);
 });
